@@ -5,8 +5,16 @@ class Vagas (models.Model):
     titulo = models.CharField(max_length=255)
     descricao = models.TextField(max_length=500)
     
-    def get_absolute_url(self): # new
-        return reverse('lawyer_detail', args=[str(self.id)])
-    
     def __str__(self):
         return self.titulo
+    
+class Candidatos (models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.CharField(max_length=50)
+    telefone = models.CharField(max_length=12)
+    cpf = models.CharField(max_length=11)
+    
+    def __str__(self):
+        return self.nome
+
+    

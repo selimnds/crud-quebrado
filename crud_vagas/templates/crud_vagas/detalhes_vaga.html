@@ -1,0 +1,17 @@
+{%extends "crud_vagas/base.html"%}
+
+{%block title%} detalhes {%endblock%}
+
+{%block content%} 
+
+<h1>{{ vaga.titulo }}</h1>
+<p>
+    {{ vaga.descricao }}
+</p>
+<a href="{% url 'editar_vaga' vaga.pk %}">editar</a>
+<br>    
+<a href="{% url 'apagar_vaga' vaga.pk %}">apagar</a>
+<br>    
+<a href="{% url 'candidatos' vaga.pk %}">candidatar-se</a>
+
+{%endblock%}

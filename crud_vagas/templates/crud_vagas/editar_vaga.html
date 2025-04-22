@@ -1,1 +1,12 @@
 {%extends "crud_vagas/base.html"%}
+
+{%block title%} editar {%endblock%}
+
+{%block content%} 
+<h1>editar</h1>
+<form method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="editar" href='listar_vaga.html'>
+</form>
+{%endblock%}

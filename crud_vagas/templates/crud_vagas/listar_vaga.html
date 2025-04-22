@@ -1,6 +1,8 @@
 {%extends "crud_vagas/base.html"%}
 {%block title%} lista {%endblock%}
 {%block content%} 
+<h1>VAGAS</h1>
 {%for vaga in vagas%}
-<h1>{{vaga.titulo}}</h1>
+<a href="{% url 'detalhes_vaga' vaga.pk %}"><h1>{{vaga.titulo}}</h1></a>
+{%endfor%}
 {%endblock%}
